@@ -1,7 +1,6 @@
 ############################
 # OS X
 ############################
-
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -10,32 +9,22 @@ Icon
 .Trashes
 ._*
 
-
 ############################
 # Linux
 ############################
-
 *~
-
 
 ############################
 # Windows
 ############################
-
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-
 
 ############################
-# Packages
+# Common package & build artifacts
 ############################
-
 *.7z
 *.csv
 *.dat
@@ -46,61 +35,56 @@ $RECYCLE.BIN/
 *.rar
 *.tar
 *.zip
+*.cab
 *.com
 *.class
 *.dll
 *.exe
 *.o
-*.seed
 *.so
-*.swo
-*.swp
-*.swn
-*.swm
 *.out
 *.pid
-
+*.msi
+*.msm
+*.msp
 
 ############################
-# Logs and databases
+# Logs and temp
 ############################
-
-.tmp
 *.log
+.tmp
+*.seed
+
+############################
+# Databases
+############################
 *.sql
 *.sqlite
 *.sqlite3
 
-
 ############################
-# Misc.
+# Editors & IDEs
 ############################
-
-*#
-ssl
-.idea
-nbproject
-public/uploads/*
-!public/uploads/.gitkeep
-.tsbuildinfo
-.eslintcache
+.idea/
+.vscode/
+nbproject/
 
 ############################
 # Node.js
 ############################
-
-lib-cov
+node_modules/
+lib-cov/
 lcov.info
 pids
 logs
 results
-node_modules
 .node_history
+yarn-error.log
+npm-debug.log*
 
 ############################
-# Package managers
+# Package managers (Yarn, PnP)
 ############################
-
 .yarn/*
 !.yarn/cache
 !.yarn/unplugged
@@ -109,23 +93,44 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
-yarn-error.log
+.pnpm-debug.log*
 
 ############################
 # Tests
 ############################
+coverage/
 
-coverage
+############################
+# TypeScript
+############################
+.tsbuildinfo
+
+############################
+# ESLint
+############################
+.eslintcache
 
 ############################
 # Strapi
 ############################
-
 .env
-license.txt
-exports
-.strapi
-dist
-build
+.env.*
+.strapirc
+.strapi/
+dist/
+build/
+.cache/
+.tmp/
 .strapi-updater.json
 .strapi-cloud.json
+exports/
+license.txt
+
+# Keep uploads folder structure but ignore actual uploads
+public/uploads/*
+!public/uploads/.gitkeep
+
+############################
+# Deployment
+############################
+.vercel/
